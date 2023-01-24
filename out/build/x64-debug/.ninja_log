@@ -1,0 +1,20 @@
+# ninja log v5
+11	973	6963034675350913	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+21	1178	6962964374973832	CMakeFiles/D2DSpaceShooter.dir/src/entities/Entity.cpp.obj	6dd984a8e1182d93
+14	1470	6963032889901448	CMakeFiles/D2DSpaceShooter.dir/src/GraphicsEngine.cpp.obj	58d70bad8d779d52
+20	1389	6963032889090862	CMakeFiles/D2DSpaceShooter.dir/src/entities/TextEntity.cpp.obj	6d2236aeee574fb7
+963	1185	6963034899885925	D2DSpaceShooter.exe	8e06166af0752255
+6	697	6962716629972107	CMakeFiles/D2DSpaceShooter.dir/src/Entity.cpp.obj	8157f93551e96c6d
+11	956	6963034898010056	CMakeFiles/D2DSpaceShooter.dir/src/GameEngine.cpp.obj	46f8fa80c53470ed
+30	1183	6962964375033823	CMakeFiles/D2DSpaceShooter.dir/src/entities/BitmapEntity.cpp.obj	d2beb489f927fb24
+21	1306	6963001487876243	CMakeFiles/D2DSpaceShooter.dir/src/entities/GradientEntity.cpp.obj	ba84d239595a25dc
+7	937	6963036358802014	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+942	1110	6963036360124448	D2DSpaceShooter.exe	8e06166af0752255
+3	946	6963037233869898	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+952	1132	6963037235305491	D2DSpaceShooter.exe	8e06166af0752255
+10	943	6963039441346291	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+948	1117	6963039442701556	D2DSpaceShooter.exe	8e06166af0752255
+10	952	6963041483305925	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+956	1121	6963041484631046	D2DSpaceShooter.exe	8e06166af0752255
+11	928	6963041827137158	CMakeFiles/D2DSpaceShooter.dir/src/MainWindow.cpp.obj	35b037986ac052d
+933	1114	6963041828538151	D2DSpaceShooter.exe	8e06166af0752255
