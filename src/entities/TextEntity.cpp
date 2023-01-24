@@ -1,7 +1,4 @@
 #include "TextEntity.h"
-#include "../GraphicsEngine.h"
-#include <d2d1_3.h>
-#include <math.h>
 
 TextEntity::TextEntity() = default;
 

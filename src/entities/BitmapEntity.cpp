@@ -1,6 +1,4 @@
 #include "BitmapEntity.h"
-#include <d2d1_3.h>
-#include <math.h>
 
 using D2D1::RectF;
 

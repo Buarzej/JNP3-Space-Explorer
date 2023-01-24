@@ -1,9 +1,7 @@
 #include "GameEngine.h"
-#include <stdlib.h>
 #include <time.h>
 #include <stdexcept>
 
-using D2D1::ColorF;
 using D2D1::Point2F;
 
 void GameEngine::InitializeAsteroid(Asteroid* asteroid) {

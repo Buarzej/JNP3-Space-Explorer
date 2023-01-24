@@ -5,12 +5,7 @@
 #include "MainWindow.h"
 #include "GraphicsEngine.h"
 #include "GameEngine.h"
-#include <windows.h>
 #include <windowsx.h>
-#include <d2d1_3.h>
-#include <wincodec.h>
-#include <stdexcept>
-#include <sysinfoapi.h>
 
 using D2D1::RenderTargetProperties;
 using D2D1::HwndRenderTargetProperties;

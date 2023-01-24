@@ -3,7 +3,6 @@
 
 #include "Entity.h"
 #include <d2d1_3.h>
-#include <array>
 
 class GradientEntity : public Entity {
 	D2D1_POINT_2F gradStart, gradEnd;

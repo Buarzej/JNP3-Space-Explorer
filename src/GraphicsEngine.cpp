@@ -5,7 +5,6 @@
 #include "GraphicsEngine.h"
 #include <stdexcept>
 #include <wincodec.h>
-#include <d2d1_3.h>
 #include <dwrite_3.h>
 
 using D2D1::HwndRenderTargetProperties;
@@ -15,7 +14,6 @@ using D2D1::RectF;
 using D2D1::Point2F;
 using D2D1::Matrix3x2F;
 using D2D1::LinearGradientBrushProperties;
-using D2D1::ColorF;
 
 HRESULT GraphicsEngine::LoadBitmapFromFile(
 	ID2D1RenderTarget* pRenderTarget,
