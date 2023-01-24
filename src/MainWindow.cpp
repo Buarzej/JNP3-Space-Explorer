@@ -30,8 +30,6 @@ INT WINAPI wWinMain(_In_ [[maybe_unused]] HINSTANCE hInstance,
 	_In_ [[maybe_unused]] PWSTR pCmdLine,
 	_In_ [[maybe_unused]] INT nCmdShow) {
 
-	static const DWORD gameTick = 30; // in miliseconds
-
 	// Register the window class.
 	const wchar_t WND_CLASS_NAME[] = TEXT("Space Explorer");
 
@@ -70,16 +68,15 @@ INT WINAPI wWinMain(_In_ [[maybe_unused]] HINSTANCE hInstance,
 	ShowWindow(hWnd, nCmdShow);
 
 	// Run the message loop.
+	BOOL res;
 	MSG msg = { };
-	DWORD lastTickCount = GetTickCount64();
-	do {
-		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
-			if (msg.message != WM_QUIT) {
-				TranslateMessage(&msg);
-				DispatchMessage(&msg);
-			}
-		}
-	} while (msg.message != WM_QUIT);
+	while ((res = GetMessage(&msg, NULL, 0, 0)) > 0) {
+		if (res == -1)
+			return 1;
+
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
 
 	return 0;
 }
@@ -88,6 +85,10 @@ LRESULT CALLBACK WindowProc(
 	HWND hwnd, UINT uMsg,
 	WPARAM wParam, LPARAM lParam
 ) {
+
+	static const ULONGLONG gameTick = 30; // in miliseconds
+	ULONGLONG lastTickCount = 0, tickCount;
+
 	switch (uMsg) {
 	case WM_CREATE:
 		graphicsEngine = new GraphicsEngine();
@@ -115,12 +116,16 @@ LRESULT CALLBACK WindowProc(
 			);
 			gameEngine->RenderCurrState();
 		}
-		else {
-			gameEngine->GameTick();
-		}
+
 		return 0;
 
 	case WM_MOUSEMOVE:
+		tickCount = GetTickCount64();
+		if (tickCount - lastTickCount >= gameTick) {
+			gameEngine->GameTick();
+			lastTickCount = tickCount;
+		}
+
 		if (gameEngine->IsGameRunning()) {
 			gameEngine->UpdateRelativeValues(
 				GET_X_LPARAM(lParam),
@@ -132,6 +137,12 @@ LRESULT CALLBACK WindowProc(
 		return 0;
 
 	case WM_PAINT:
+		tickCount = GetTickCount64();
+		if (tickCount - lastTickCount >= gameTick) {
+			gameEngine->GameTick();
+			lastTickCount = tickCount;
+		}
+
 		RECT rc;
 		GetClientRect(hwnd, &rc);
 
